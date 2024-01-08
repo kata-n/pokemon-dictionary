@@ -1,6 +1,14 @@
 import React from "react";
+import { PokemonType } from "./types";
+type pokeThumType = Omit<PokemonType, "jpName" | "jpType">;
 
-export const PokemonThumbnails = ({ id, name, image, iconImage, pokeType }) => {
+export const PokemonThumbnails = ({
+  id,
+  name,
+  image,
+  iconImage,
+  pokeType,
+}: pokeThumType) => {
   return (
     <div>
       <div className="number">
