@@ -22,22 +22,21 @@ function App() {
           const _iconImage = data.sprites.other.dream_world.front_default;
           const _pokeType = data.types[0].type.name;
           const japanese = await translateToJapanese(data.name, _pokeType);
-          const newPokemonList = {
-            id: data.id,
-            name: data.name,
-            iconImage: _iconImage,
-            image: _image,
-            pokeTsype: _pokeType,
-            jpName: japanese.pokeName,
-            jpType: japanese.pokeType,
-          };
-          setAllPokemonList(
-            (currentList: SetStateAction<PokemonType[] | undefined>) => {
-              // @ts-ignore
-              const updatedList = [...currentList, newPokemonList];
-              return updatedList.sort((a, b) => a.id - b.id);
-            }
-          );
+          const newPokemonList = [
+            {
+              id: data.id,
+              name: data.name,
+              iconImage: _iconImage,
+              image: _image,
+              pokeTsype: _pokeType,
+              jpName: japanese.pokeName,
+              jpType: japanese.pokeType,
+            },
+          ];
+          setAllPokemonList((currentList) => {
+            const updatedList = [...currentList, ...newPokemonList];
+            return updatedList.sort((a, b) => a.id - b.id);
+          });
         });
     });
   };
