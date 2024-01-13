@@ -16,11 +16,12 @@
     "typescript": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://kata-n.github.io/pokemon-dictionary/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "deploy": "rm -rf docs && npm run build && mv build docs"
   },
   "eslintConfig": {
     "extends": [
