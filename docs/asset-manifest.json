@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokemon-dictionary/static/css/main.18ba7da0.css",
+    "main.js": "/pokemon-dictionary/static/js/main.7d111d43.js",
+    "index.html": "/pokemon-dictionary/index.html",
+    "main.18ba7da0.css.map": "/pokemon-dictionary/static/css/main.18ba7da0.css.map",
+    "main.7d111d43.js.map": "/pokemon-dictionary/static/js/main.7d111d43.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18ba7da0.css",
+    "static/js/main.7d111d43.js"
+  ]
+}
