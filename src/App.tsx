@@ -1,8 +1,9 @@
-import React, { SetStateAction } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import { PokemonThumbnails } from "./PokemonThumbnails";
 import { translateToJapanese } from "./util/translate";
 import { PokemonType } from "./types";
+import "./index.css";
 
 function App() {
   const [pokemonList, setAllPokemonList] = useState<PokemonType[]>();
@@ -33,8 +34,9 @@ function App() {
               jpType: japanese.pokeType,
             },
           ];
+          // @ts-ignore
           setAllPokemonList((currentList) => {
-            const updatedList = [...currentList, ...newPokemonList];
+            const updatedList = [...(currentList || []), ...newPokemonList];
             return updatedList.sort((a, b) => a.id - b.id);
           });
         });

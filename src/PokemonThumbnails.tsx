@@ -10,7 +10,7 @@ export const PokemonThumbnails = ({
   pokeType,
 }: pokeThumType) => {
   return (
-    <div>
+    <div className="thumb-container grass">
       <div className="number">
         <small>#0{id}</small>
       </div>
