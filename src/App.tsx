@@ -9,9 +9,9 @@ function App() {
   const [pokemonList, setAllPokemonList] = useState<PokemonType[]>();
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon?limit=20");
   const [isLoading, setIsLoading] = useState(false);
-  useEffect(() => {
-    getAllPokemonList();
-  }, []);
+  // useEffect(() => {
+  //   getAllPokemonList();
+  // }, []);
 
   const createPokemonObject = (results: PokemonType[]) => {
     results.forEach((pokemon) => {
@@ -84,7 +84,7 @@ function App() {
           <div className="load-more">now loading...</div>
         ) : (
           <button className="load-more" onClick={getAllPokemonList}>
-            もっとみる！
+            {!pokemonList?.length ? "はじめる" : "もっとみる！"}
           </button>
         )}
       </div>
